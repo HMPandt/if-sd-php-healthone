@@ -3,6 +3,7 @@ require '../Modules/categories.php';
 require '../Modules/login.php';
 require '../Modules/logout.php';
 require '../Modules/database.php';
+require '../Modules/fietsen.php';
 require '../Modules/common.php';
 
 session_start();
@@ -34,7 +35,10 @@ switch ($params[1]) {
 
     case 'product':
         break;
-
+    case 'fietsen':
+            $result = getfietsen();
+            include_once "../Templates/fietsen.php";
+            break;
     case 'login':
         $titleSuffix = ' | Home';
         include_once "../Templates/home.php";
