@@ -39,6 +39,10 @@ switch ($params[1]) {
             $result = getfietsen();
             include_once "../Templates/fietsen.php";
             break;
+    case 'detail':
+        $sult = getfiets($params[2]);
+        include_once "../Templates/detail.php";
+        break;
     case 'login':
         $titleSuffix = ' | Home';
         include_once "../Templates/home.php";
