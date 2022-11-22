@@ -39,6 +39,16 @@ switch ($params[1]) {
             $result = getfietsen();
             include_once "../Templates/fietsen.php";
             break;
+    case 'update':
+        if (isset($_POST[ "submit"])){
+            $fiets = getUpdate($params[2]);
+            include_once "../Templates/update.php";
+        } else{
+            $sult = getfiets($params[2]);
+            include_once "../Templates/update.php";
+        }
+
+            break;
     case 'detail':
         $sult = getfiets($params[2]);
         include_once "../Templates/detail.php";

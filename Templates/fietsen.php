@@ -26,8 +26,10 @@
             <th>Merk</th>
             <th>Type</th>
             <th>Prijs</th>
-            <th></th>
-            <th></th>
+            <th>Voorraad</th>
+            <th>Details</th>
+            <th>Update</th>
+            <th>Delete</th>
         <?php
         global $result;
         $num = 1;
@@ -37,7 +39,10 @@
             echo "<td>" . $num . " " . "</td>";
             echo "<td>" . $data["Merk"]. "</td>";
             echo "<td>" . $data["Type"] . "</td>" ;
+            echo "<td>" . $data["Prijs"] . "</td>" ;
+            echo "<td>" . $data["voorraad"] . "</td>" ;
             echo "<td>" . "<a href='detail/" . $data["ID"] . "'>" . "Details"  . "</a>" . "</td>" ;
+            echo "<td>" . "<a href='update/" . $data["ID"] . "'>" . "Update"  . "</a>" . "</td>" ;
             $num++;
             echo "<tr>";
 
