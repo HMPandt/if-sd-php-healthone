@@ -31,18 +31,19 @@
             <th>Update</th>
             <th>Delete</th>
         <?php
-        global $result;
+
+        global $sult;
         $num = 1;
 
-        foreach ($result as &$data){
+        foreach ($sult as &$data){
             echo "<tr>";
             echo "<td>" . $num . " " . "</td>";
-            echo "<td>" . $data["Merk"]. "</td>";
-            echo "<td>" . $data["Type"] . "</td>" ;
-            echo "<td>" . $data["Prijs"] . "</td>" ;
+            echo "<td>" . $data["merk"]. "</td>";
+            echo "<td>" . $data["type"] . "</td>" ;
+            echo "<td>" . $data["prijs"] . "</td>" ;
             echo "<td>" . $data["voorraad"] . "</td>" ;
-            echo "<td>" . "<a href='detail/" . $data["ID"] . "'>" . "Details"  . "</a>" . "</td>" ;
-            echo "<td>" . "<a href='update/" . $data["ID"] . "'>" . "Update"  . "</a>" . "</td>" ;
+            echo "<td>" . "<a href='detail/" . $data["id"] . "'>" . "Details"  . "</a>" . "</td>" ;
+            echo "<td>" . "<a href='update/" . $data["id"] . "'>" . "Update"  . "</a>" . "</td>" ;
             $num++;
             echo "<tr>";
 

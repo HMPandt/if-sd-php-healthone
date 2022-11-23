@@ -24,11 +24,11 @@
 
         foreach ($sult as &$data){
 
-            echo "<h2> Artikelnummer" . $data["ID"]. "</h2>";
-            echo "<h2>" . $data["Merk"]. "</h2>";
-            echo "<h2>" . $data["Type"] . "</h2>" ;
+            echo "<h2> Artikelnummer" . $data["id"]. "</h2>";
+            echo "<h2>" . $data["merk"]. "</h2>";
+            echo "<h2>" . $data["type"] . "</h2>" ;
             echo "<h2> Voorraad: " . $data["voorraad"] . "</h2>" ;
-            echo "<h2>" . "Prijs: &euro;" . number_format($data["Prijs"], 2, ",", ".") . "</h2>" ;
+            echo "<h2>" . "Prijs: &euro;" . number_format($data["prijs"], 2, ",", ".") . "</h2>" ;
         }
 
         echo "<a href='../fietsen'>Go back</a>"

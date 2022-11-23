@@ -17,14 +17,16 @@ function getfiets($id){
     return $sult;
 }
 
-function getUpdate($merk, $type, $price, $voorraad ){
+function update(){
+    global $merk,$type,$price,$voorraad, $params;
     $db = new PDO("mysql:host=localhost;dbname=fietsenmaker", "root", "");
-    $query->bindParam("Merk", $merk);
-    $query->bindParam("Type", $type);
-    $query->bindParam("Prijs", $price);
-    $query->bindParam("voorraad", $voorraad);
-    $fiets = $db->prepare("UPDATE fiets SET merk = :merk, type = :type, prijs = :prijs, voorraad = :voorraad WHERE id = :id ");
-    return $fiets;
+    $update = $db->prepare("UPDATE fiets SET merk = :merk, type = :type, prijs = :prijs, voorraad = :voorraad WHERE id = :id ");
+    $update->bindParam("merk", $merk);
+    $update->bindParam("type", $type);
+    $update->bindParam("prijs", $price);
+    $update->bindParam("voorraad", $voorraad);
+    $update->bindParam("id", $params[2]);
+    $update->execute();
 }
-?>
+
 

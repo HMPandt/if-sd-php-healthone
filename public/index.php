@@ -36,12 +36,12 @@ switch ($params[1]) {
     case 'product':
         break;
     case 'fietsen':
-            $result = getfietsen();
+            $sult = getfietsen();
             include_once "../Templates/fietsen.php";
             break;
     case 'update':
         if (isset($_POST[ "submit"])){
-            $fiets = getUpdate($params[2]);
+            $rsult = update();
             include_once "../Templates/update.php";
         } else{
             $sult = getfiets($params[2]);
